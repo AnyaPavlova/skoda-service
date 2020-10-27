@@ -1,0 +1,72 @@
+.menu-block {
+    background: #222222;
+    padding   : 18px 0;
+    z-index   : 900;
+    position  : relative;
+
+    @media screen and (max-width: 1200px) {
+        display   : none;
+        position  : absolute;
+        right     : 0;
+        top       : 0;
+        background: #ffffff;
+        width     : 350px;
+        padding   : 20px 0 25px;
+    }
+    
+    @media screen and (max-width: 670px) {
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+
+        padding-top: 18px;
+    }
+
+    &__inner {
+        @media screen and (max-width: 1200px) {
+            padding: 0 40px;
+
+            &:before {
+                content       : 'МЕНЮ';
+                display       : block;
+                font-size     : 20px;
+                font-weight   : 700;
+                color         : #C4C4C4;
+                padding-bottom: 15px;
+            }
+        }
+        @media screen and (max-width: 670px) {
+            padding: 0 40px;
+
+            &:before {
+                text-align: right;
+                padding-right: 30px;
+            }
+        }
+    }
+
+}
+
+.menu-block__mob-info {
+    display: none;
+
+    @media screen and (max-width: 670px) {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 61px 0 41px;
+    }
+
+    .contacts-line__logo-link {
+        max-width: 185px;   
+    }
+}
+.menu-block__mob-contacts {
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;    
+}

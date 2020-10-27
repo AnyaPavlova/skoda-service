@@ -1,6 +1,21 @@
 "use strict";
 
-$(document).ready(function () {});
+$(document).ready(function () {
+  //Бургер
+  var isMobile = window.matchMedia("(max-width: 1200px)").matches;
+  var burger = document.querySelector('#burger');
+
+  if (burger && isMobile) {
+    var toggleBurger = function toggleBurger(event) {
+      event.preventDefault();
+      $(menuBlock).slideToggle(300);
+      burger.classList.toggle('burger--open');
+    };
+
+    burger.addEventListener('click', toggleBurger);
+    var menuBlock = document.querySelector('.menu-block');
+  }
+});
 /*Полифилы для ie*/
 
 if (!Element.prototype.matches) {
