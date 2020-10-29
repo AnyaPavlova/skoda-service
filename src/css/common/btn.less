@@ -1,15 +1,33 @@
 .btn {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffffff;
-    background: @color-green;
-    transition: all 0.5s;
-    padding: 13px 25px;
+    display        : inline-block;
+    font-size      : 16px;
+    font-weight    : 700;
+    color          : #ffffff;
+    background     : @color-green;
+    transition     : all 0.5s;
+    padding        : 13px 25px;
     text-decoration: none;
-    line-height: 1.2;
+    line-height    : 1.2;
 
     &:hover {
         background: #377220;
+    }
+}
+
+.btn-more {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333333;
+
+    span {
+        line-height   : 1;
+        display       : inline-block;
+        vertical-align: bottom;
+        padding-right: 5px;
+    }
+
+    svg {
+        display       : inline-block;
+        vertical-align: bottom;
     }
 }

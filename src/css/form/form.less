@@ -1,0 +1,29 @@
+.form {
+    &__message {
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.4;        
+    }
+
+    &__message--ok {
+        color      : @color-green;
+        display: block;
+    }
+
+    &__message--error {
+        color      : red;
+        display: block;
+    }
+}
+
+// Ошибки заполнения
+.form__input--error  {
+    border-color: red !important;
+}
+
+.form__input-error-text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #FF0000;
+}
