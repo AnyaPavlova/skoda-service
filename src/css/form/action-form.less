@@ -2,29 +2,99 @@
     padding-bottom: 63px;
     box-shadow: inset 0px -1px 0px #DDDDDD;
 
+    @media screen and (max-width: 960px) {
+        padding-bottom: 0;
+        box-shadow: none;
+    }
+
     &__fieldset {
-        padding-bottom: 20px;
+        padding-bottom: 10px;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 3px;
+        } 
+        @media screen and (max-width: 670px) {
+            padding-bottom: 0;
+        }
     }
 
     &__row {
         margin-left: -18px;
         margin-right: -18px;
-    }
+
+        @media screen and (max-width: 960px) {
+            margin-left: -6px;
+            margin-right: -6px;
+        }
+    }    
     &__col {
         padding-left: 18px;
         padding-right: 18px;
+
+        @media screen and (max-width: 960px) {
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+    }
+    &__row--agree {
+        .action-form__col:first-child {
+            text-align: right;
+
+            @media screen and (max-width: 960px) {
+                text-align: left;
+            }
+        }
     }
 
     &__for-input {
-        padding-bottom: 30px;
+        margin-bottom: 30px;
+        position: relative;
+
+        @media screen and (max-width: 960px) {
+            margin-bottom: 20px;
+        }
     }
     &__for-select {
-        padding-bottom: 30px;
+        margin-bottom: 30px;
+        position: relative;
+
+        @media screen and (max-width: 960px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__required-info {
+        margin-bottom: 30px;
+        padding-top: 10px;
+
+        @media screen and (max-width: 960px) {
+            margin-bottom: 20px;
+        }
+        @media screen and (max-width: 670px) {
+            padding-top: 0;
+            margin-bottom: 13px;
+        }
+    }
+    &__required-text {
+        font-size: 16px;
+        color: @color-gray;
+
+        @media screen and (max-width: 670px) {
+            text-align: center;
+        }
+
+        span {
+            color: @color-green;
+            font-size: 20px;
+        }
     }
 
     &__btns-block {
         padding-top: 20px;
         text-align: center;
+
+        @media screen and (max-width: 960px) {
+            padding-top: 32px;
+        }
     }
 }
 
@@ -37,6 +107,11 @@
     color: #000000;
     padding-left: 10px;
     padding-right: 10px;
+
+    @media screen and (max-width: 960px) {
+        height: 40px;
+        font-size: 18px;
+    }
 
     &::-webkit-input-placeholder {
         color  : #333333;
@@ -67,7 +142,14 @@
 
 .action-form__for-checkbox {
     position: relative;
-    padding: 10px 0;
+    margin: 10px 0;
+
+    @media screen and (max-width: 960px) {
+        margin: 5px 0;
+    } 
+    @media screen and (max-width: 670px) {
+        margin: 7px 0;
+    }
 }
 .action-form__checkbox {
     display   : block;
@@ -98,6 +180,10 @@
     font-size: 16px;
     padding-left: 12px;
     color: @color-gray;
+
+    @media screen and (max-width: 960px) {
+        font-size: 14px;
+    }
 
     @media screen and (max-width: 670px) {
         font-size: 14px;
@@ -141,5 +227,12 @@
     /* Firefox 18- */
     &:-ms-input-placeholder {
         color  : red;
+    }
+}
+
+.action-form  {
+    .form__input-error-text {
+        position: absolute;
+        bottom: -20px;
     }
 }

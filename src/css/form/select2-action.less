@@ -1,6 +1,6 @@
 // Стили для выпадаек select2-action + &--theme-select2-action
 .select2-action {
-    position: relative;    
+    position: relative;
 }
 
 .select2-action:before {
@@ -13,34 +13,47 @@
 
 //Само поле вывода
 .select2-action .select2-container--theme-select2-action .select2-selection--single {
-    background: transparent;
-    position: relative;
-    height: 44px;
-    padding: 0 10px;
-    border-bottom: 1px solid rgba(0,0,0,0.25);
-    display: flex;
+    background   : transparent;
+    position     : relative;
+    height       : 44px;
+    padding      : 0 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    display      : flex;
     align-content: center;
-    align-items: center;
+    align-items  : center;
+
+    @media screen and (max-width: 960px) {
+        height: 40px;
+    }
 }
 
 //placeholder
 .select2-action .select2-container--theme-select2-action .select2-selection__placeholder {
-    color  : #333333;
+    color      : #333333;
     font-weight: 300;
-    font-size: 20px;    
+    font-size  : 20px;
+
+    @media screen and (max-width: 960px) {
+        font-size: 18px;
+    }
 }
 
 //выбранный пункт
-.select2-action .select2-container--theme-select2-action .select2-selection--single .select2-selection__rendered { 
+.select2-action .select2-container--theme-select2-action .select2-selection--single .select2-selection__rendered {
     font-size  : 20px;
     font-weight: 400;
     color      : #000000;
+
+    @media screen and (max-width: 960px) {
+        font-size: 18px;
+    }
 }
 
 //стрелочка в селекте
 .select2-action .select2-container--theme-select2-action .select2-selection--single .select2-selection__arrow {
     position: static;
 }
+
 .select2-action .select2-container--theme-select2-action .select2-selection--single .select2-selection__arrow b {
     position           : absolute;
     border             : none;
@@ -53,19 +66,21 @@
     background-position: right center;
     background-repeat  : no-repeat;
     transition         : transform .5s ease-in-out;
-    top                : 0; bottom: 0;
+    top                : 0;
+    bottom             : 0;
     right              : 15px;
-    font-weight: 700;
+    font-weight        : 700;
 }
+
 .select2-action .select2-container--theme-select2-action.select2-container--open .select2-selection--single .select2-selection__arrow b {
     transform: rotateX(180deg);
 }
 
 //Блок с выбором
-.select2-container--theme-select2-action .select2-results__options { 
-    padding: 10px 0;
+.select2-container--theme-select2-action .select2-results__options {
+    padding   : 10px 0;
     margin-top: 14px;
-    position: relative;
+    position  : relative;
     background: #ffffff;
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
 
@@ -74,13 +89,17 @@
 }
 
 //Элемент выбора в списке
-.select2-container--theme-select2-action .select2-results__option {    
-    font-size : 20px;
-    padding   : 10px 30px;
-    color: #333333;
-    font-weight: 300;
+.select2-container--theme-select2-action .select2-results__option {
+    font-size     : 20px;
+    padding       : 10px 30px;
+    color         : #333333;
+    font-weight   : 300;
     text-transform: uppercase;
-    
+
+    @media screen and (max-width: 960px) {
+        font-size: 18px;
+    }
+
     // &:first-child {
     //     padding-top: 20px;
     // }
@@ -88,15 +107,17 @@
     //     padding-bottom: 20px;
     // }
 }
+
 //Элемент выбора в списке при наведении
 .select2-container--theme-select2-action .select2-results__option--highlighted:hover {
-    background: rgba(241,240,235,0.3);
+    background: rgba(241, 240, 235, 0.3);
 }
+
 //Выбранный элемент в списке
 .select2-container--theme-select2-action .select2-results__option[aria-selected=true] {
-    color: #4BA82E;
-    padding-left: 50px;
-    background: url(../images/icons/select-check-icon.svg) no-repeat 30px center;
+    color          : #4BA82E;
+    padding-left   : 50px;
+    background     : url(../images/icons/select-check-icon.svg) no-repeat 30px center;
     background-size: 16px 16px;
 }
 
@@ -122,5 +143,15 @@
 }
 
 .select2-action .select2.select2-container {
-    width: 100% !important;    
+    width: 100% !important;
+}
+
+
+// Ошибка заполнения
+.form__input--error+.select2-container--theme-select2-action .select2-selection--single {
+    border-color: red;
+}
+
+.form__input--error+.select2-container--theme-select2-action .select2-selection__placeholder {
+    color: red;
 }

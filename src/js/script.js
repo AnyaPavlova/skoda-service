@@ -113,7 +113,7 @@ $(document).ready(function () {
     }
     function validateFields(form) {
         var error = false;
-        var requredItems = form.querySelectorAll('input[required]');
+        var requredItems = form.querySelectorAll('[required]');
 
         for (var item = 0; item < requredItems.length; item++) {
             if (requredItems[item].classList.contains('form-phone')) { validateEmail(requredItems[item]); } //для email-а
@@ -169,6 +169,7 @@ $(document).ready(function () {
 
     function resetForm(form) {
         $(form).trigger('reset');
+        $('select').val('').change(); //для select2 !!!
         setTimeout(() => {
             if (form.querySelector('.form__message')) {
                 form.querySelector('.form__message').parentNode.removeChild(form.querySelector('.form__message'));
@@ -202,13 +203,33 @@ $(document).ready(function () {
         }
     }
 
-    //Select2
     var haveSelect = $(".select2-action");
     if (haveSelect.length != 0) {
         $('.select2-action select').select2({
             theme: 'theme-select2-action'
-        });
+        }).on('change',changeSelect).trigger('change');
+
+        //Если меняется select2, то вызываем функцияю изменения select
+        function changeSelect(event) {
+            //создаем событие изменение select
+            var changeSelectEvent;
+            if (typeof (Event) === 'function') {
+                changeSelectEvent = new Event('input', { bubbles: true, cancelable: true });
+            } else {
+                changeSelectEvent = document.createEvent('Event');
+                changeSelectEvent.initEvent('input', true, true);
+            }
+            this.closest('.select2-action').querySelector('select').dispatchEvent(changeSelectEvent); //вызываем событие
+        }
     };
+    //Select2
+    // var haveSelect = $(".select2-action");
+    // if (haveSelect.length != 0) {
+    //     $('.select2-action select').select2({
+    //         theme: 'theme-select2-action'
+    //     });
+    // };
+    
 
 })
 
