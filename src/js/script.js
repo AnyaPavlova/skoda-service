@@ -58,11 +58,11 @@ $(document).ready(function () {
         e.preventDefault();
         var mylink = $(this).attr('href');
         var positionblock = $(mylink).offset().top;
-        
-        if(isMobile) {
+
+        if (isMobile) {
             var heightHeader = document.querySelector('.contacts-line').clientHeight;
             positionblock = positionblock - heightHeader;
-            
+
             //создаем событие клика по бургеру
             var clickBurger;
             if (typeof (Event) === 'function') {
@@ -201,6 +201,14 @@ $(document).ready(function () {
             event.target.value = event.target.value.replace(regexpPhone, '');
         }
     }
+
+    //Select2
+    var haveSelect = $(".select2-action");
+    if (haveSelect.length != 0) {
+        $('.select2-action select').select2({
+            theme: 'theme-select2-action'
+        });
+    };
 
 })
 

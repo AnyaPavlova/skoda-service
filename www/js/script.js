@@ -223,7 +223,18 @@ $(document).ready(function () {
     for (var i = 0; i < inputEmails.length; i++) {
       inputEmails[i].addEventListener('input', replacePhoneNum);
     }
+  } //Select2
+
+
+  var haveSelect = $(".select2-action");
+
+  if (haveSelect.length != 0) {
+    $('.select2-action select').select2({
+      theme: 'theme-select2-action'
+    });
   }
+
+  ;
 });
 /*Полифилы для ie*/
 

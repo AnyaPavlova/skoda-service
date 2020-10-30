@@ -1,0 +1,33 @@
+.action-form-block {
+    padding: 60px 0 97px;
+
+    // @media screen and (max-width: 960px) {
+    //     padding: 40px 0 80px;
+    // }
+
+    &__inner {
+        max-width: 811px;
+
+        @media screen and (max-width: 960px) {
+            max-width: calc( 77% + 60px );
+        }
+
+        @media screen and (max-width: 670px) {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        padding-bottom: 60px;
+        text-align: center;
+        font-size: 24px;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 40px;
+        }        
+        @media screen and (max-width: 670px)  {
+            padding-bottom: 20px;
+            font-size: 20px;
+        }
+    }
+}

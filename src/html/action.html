@@ -1,0 +1,176 @@
+@@include('./main/head.html', {
+"title": "Страница акции | ŠKODA"
+})
+@@include('./main/header-pages.html')
+
+<section class="action-banner">
+    <div class="action-banner__container">
+        <picture>
+            <source srcset="./images/action-banner/01-mob.jpg" media="(max-width: 670px)">
+            <source srcset="./images/action-banner/01-ipad.jpg" media="(max-width: 960px)">
+            <source srcset="./images/action-banner/01.jpg">
+            <img src="./images/action-banner/01.jpg" alt="Photo" class="action-banner__photo">
+        </picture>
+        <div class="action-banner__info">
+            <div class="action-banner__inner inner">
+                <h1 class="action-banner__title">СЕЗОННЫЙ ШИНОМОНТАЖ <span>В WAGNER</span></h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="action-info">
+    <div class="action-info__inner inner">
+        <p class="action-info__p">Группа официальных дилеров ŠKODA WAGNER открывает сезон осенней замены шин и колесных дисков!</p>
+        <p class="action-info__p">Благодаря дисконтной программе и отлаженной работе специалистов этот процесс пройдет быстро и безболезненно.</p>
+        <p class="action-info__p">Во время ожидания своей ŠKODA для Вас доступен бесплатный WI FI, горячий кофе и комфортная детская зона ŠKODA FAMILY для Ваших малышей.</p>
+        <table class="action-info__table">
+            <tr class="action-info__table-header">
+                <th>Наименование</th>
+                <th>Фиксированная стоимость</th>
+            </tr>
+            <tr>
+                <td>Шиномонтаж SK (Колеса в сборе)</td>
+                <td>2 640,00 ₽</td>
+            </tr>
+            <tr>
+                <td>Шиномонтаж SK</td>
+                <td>3 340,00 ₽</td>
+            </tr>
+            <tr>
+                <td>Шиномонтаж + хранение SK (Колеса в сборе)</td>
+                <td>4 600,00 ₽</td>
+            </tr>
+            <tr>
+                <td>Шиномонтаж + хранение SK (Колеса в сборе)</td>
+                <td>5 300,00 ₽</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section class="action-info action-info--gray">
+    <div class="inner action-info__inner">
+        <h3 class="action-info__subtitle">В стоимость работ входит:</h3>
+
+        <div class="action-info__work-includes">
+            <div class="row">
+                <div class="col col-6">
+                    <p class="action-info__item-work-includes">снятие/установка колёс</p>
+                    <p class="action-info__item-work-includes">балансировка колёс</p>
+                    <p class="action-info__item-work-includes">визуальный осмотр и контроль состояния шин</p>
+                </div>
+                <div class="col col-6">
+                    <p class="action-info__item-work-includes">демонтаж/монтаж шин</p>
+                    <p class="action-info__item-work-includes">проверка состояния тормозных колодок и дисков</p>
+                    <p class="action-info__item-work-includes">проверка уровня эксплуатационных жидкостей</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="action-info">
+    <div class="action-info__inner inner">
+        <p class="action-info__p">С акциями и другими специальными предложениями выгода не суммируется.</p>
+        <p class="action-info__p">Подробности уточняйте у сотрудников наших сервисных центров по телефону <a href="tel:+78122453044" class="action-info__phone">+7 (812) 245-3044</a></p>        
+    </div>
+</section>
+
+<section class="action-form-block">
+    <div class="inner action-form-block__inner">
+        <h2 class="action-form-block__title">ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ</h2>
+        <div class="action-form-block__form">
+
+            <form class="action-form" action="jquery-mailer.php" method="post" novalidate>
+                <input type="hidden" value="action" name="formType" />
+                <input value="Форма получтить предложение на странице акции" type="hidden" name="formSubject" />        
+                
+                <fieldset class="action-form__fieldset">
+                    <div class="action-form__row row">
+                        <div class="action-form__col col col-6">
+                            <div class="action-form__for-input">
+                                <input type="text" name="name" class="action-form__input" placeholder="Имя*" data-form-error="Укажите имя" required>
+                            </div>
+                            <div class="action-form__for-input">
+                                <input type="text" name="secondname" class="action-form__input" placeholder="Фамилия*" data-form-error="Укажите фамилию" required>
+                            </div>
+                            <div class="action-form__for-input">
+                                <input type="tel" name="phone" class="action-form__input form-phone" placeholder="Телефон*" data-form-error="Проверьте корректность телефона" required>
+                            </div>
+                            <div class="action-form__for-input">
+                                <input type="email" name="email" class="action-form__input" placeholder="E-mail*" data-form-error="Укажите e-mail" required>
+                            </div>
+                        </div>
+                        <div class="action-form__col col col-6">
+                            <div class="action-form__for-select select2-action">
+                                <select name="city" data-placeholder="Выберите город*" data-form-error="Выберите один из пунктов списка" required>
+                                    <option value="">Выберите город*</option>
+                                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Выборг">Выборг</option>
+                                    <option value="Омск">Омск</option>
+                                    <option value="Псков">Псков</option>
+                                </select>
+                            </div>
+                            <div class="action-form__for-select select2-action">
+                                <select name="dealer" data-placeholder="Выберите дилера*" data-form-error="Выберите один из пунктов списка" required>
+                                    <option value="">Выберите дилера*</option>
+                                    <option value="Центр Пулково">Центр Пулково</option>
+                                    <option value="Центр Лахта">Центр Лахта</option>
+                                    <option value="Центр Таллинский">Центр Таллинский</option>
+                                </select>
+                            </div>
+                            <div class="action-form__for-select select2-action">
+                                <select name="model" data-placeholder="Выберите модель SKODA*" data-form-error="Выберите один из пунктов списка" required>
+                                    <option value="">Выберите модель SKODA*</option>
+                                    <option value="НОВЫЙ RAPID">НОВЫЙ RAPID</option>
+                                    <option value="RAPID">RAPID</option>
+                                    <option value="OCTAVIA">OCTAVIA</option>
+                                    <option value="KODIAQ">KODIAQ</option>
+                                    <option value="SUPERB">SUPERB</option>
+                                    <option value="KARUQ">KARUQ</option>
+                                </select>
+                            </div>
+                            <div class="action-form__required-info">
+                                <p class="action-form__required-text"><span>*</span> Поля, обязательные для заполнения</p>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="action-form__fieldset">
+                    <div class="action-form__row action-form__row--agree row">
+                        <div class="action-form__col col-6">
+                            <div class="action-form__for-checkbox">
+                                <input class="action-form__checkbox" id="agree-action" type="checkbox" name="agree[]" value="Согласие на обработку запроса" required checked data-form-error="Подтвердите согласие на обработку">
+                                <label for="agree-action" class="action-form__label">
+                                    <span class="action-form__check"></span>
+                                    <span class="action-form__text"><a href="#">Согласие на обработку запроса</a></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="action-form__col col-6">
+                            <div class="action-form__for-checkbox">
+                                <input class="action-form__checkbox" id="agree2-action" type="checkbox" name="agree[]" value="Согласие на дальнейшую коммуникацию" required checked data-form-error="Подтвердите согласие на коммуникацию">
+                                <label for="agree2-action" class="action-form__label">
+                                    <span class="action-form__check"></span>
+                                    <span class="action-form__text"><a href="#">Согласие на дальнейшую коммуникацию</a></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>                
+                
+                <div class="action-form__btns-block">
+                    <button type="submit" class="btn action-form__btn">Отправить заявку</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</section>
+
+@@include('./main/footer.html')

@@ -1,0 +1,145 @@
+.action-form {
+    padding-bottom: 63px;
+    box-shadow: inset 0px -1px 0px #DDDDDD;
+
+    &__fieldset {
+        padding-bottom: 20px;
+    }
+
+    &__row {
+        margin-left: -18px;
+        margin-right: -18px;
+    }
+    &__col {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    &__for-input {
+        padding-bottom: 30px;
+    }
+    &__for-select {
+        padding-bottom: 30px;
+    }
+
+    &__btns-block {
+        padding-top: 20px;
+        text-align: center;
+    }
+}
+
+.action-form__input {
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    width: 100%;
+    height: 44px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &::-webkit-input-placeholder {
+        color  : #333333;
+        opacity: 1;
+        font-weight: 300;
+    }
+
+    &::-moz-placeholder {
+        color  : #333333;
+        opacity: 1;
+        font-weight: 300;
+    }
+
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        color  : #333333;
+        opacity: 1;
+        font-weight: 300;
+    }
+
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+        color  : #333333;
+        opacity: 1;
+        font-weight: 300;
+    }
+}
+
+.action-form__for-checkbox {
+    position: relative;
+    padding: 10px 0;
+}
+.action-form__checkbox {
+    display   : block;
+    visibility: visible;
+    opacity   : 0;
+    position  : absolute;
+}
+.action-form__label {
+    cursor: pointer;
+    font-size: 0;
+    vertical-align: top;
+}
+.action-form__check {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;    
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07);
+    border: 1px solid @color-green;
+    border-radius: 6px;
+}
+.action-form__text {
+    max-width: calc( 100% - 24px);
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    padding-left: 12px;
+    color: @color-gray;
+
+    @media screen and (max-width: 670px) {
+        font-size: 14px;
+    }
+}
+.action-form__checkbox:checked + .action-form__label .action-form__check {
+    background: @color-green;
+}
+.action-form__checkbox:checked + .action-form__label .action-form__check:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 8px;
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    margin: auto;
+    background: url(../images/icons/check-icon.svg) no-repeat center;
+    background-size: contain;
+}
+
+.form__input--error.action-form__checkbox + .action-form__label .action-form__check  {
+    border-color: red;
+}
+.form__input--error.action-form__input {
+    // color: red;
+
+    &::-webkit-input-placeholder {
+        color  : red;
+    }
+
+    &::-moz-placeholder {
+        color  : red;
+    }
+
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        color  : red;
+    }
+
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+        color  : red;
+    }
+}
