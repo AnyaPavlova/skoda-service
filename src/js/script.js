@@ -59,7 +59,7 @@ $(document).ready(function () {
         var mylink = $(this).attr('href');
         var positionblock = $(mylink).offset().top;
 
-        if (isMobile) {
+        if ( isMobile && burger.classList.contains('burger--open') ) {
             var heightHeader = document.querySelector('.contacts-line').clientHeight;
             positionblock = positionblock - heightHeader;
 
