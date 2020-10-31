@@ -10,9 +10,18 @@
         padding-bottom: 17px;
         position: relative;
     }
+    &__for-select {
+        padding-bottom: 17px;
+        position: relative;
+    }
 
     &__btns-block {
         padding-top: 33px;
+
+        &--popup {
+            text-align: center;
+            padding-top: 25px;
+        }
 
         @media screen and (max-width: 960px) {
             text-align: center;
@@ -31,24 +40,24 @@
 
     &::-webkit-input-placeholder {
         color  : @color-gray;
-        opacity: 1;
+        opacity: 0.5;
     }
 
     &::-moz-placeholder {
         color  : @color-gray;
-        opacity: 1;
+        opacity: 0.5;
     }
 
     /* Firefox 19+ */
     &:-moz-placeholder {
         color  : @color-gray;
-        opacity: 1;
+        opacity: 0.5;
     }
 
     /* Firefox 18- */
     &:-ms-input-placeholder {
         color  : @color-gray;
-        opacity: 1;
+        opacity: 0.5;
     }
 }
 

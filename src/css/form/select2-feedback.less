@@ -1,0 +1,136 @@
+// Стили для выпадаек select2-feedback + &--theme-select2-feedback
+.select2-feedback {
+    position: relative;
+}
+
+.select2-feedback:before {
+    content: none;
+}
+
+.select2-feedback .select2-container {
+    background: transparent;
+}
+
+//Само поле вывода
+.select2-feedback .select2-container--theme-select2-feedback .select2-selection--single {
+    background   : transparent;
+    position     : relative;
+    height: 51px;
+    padding      : 0 25px;
+    border: 1px solid @color-gray;
+    display      : flex;
+    align-content: center;
+    align-items  : center;
+}
+
+//placeholder
+.select2-feedback .select2-container--theme-select2-feedback .select2-selection__placeholder {
+    color      : @color-gray;
+    opacity: 0.5;
+    font-weight: 400;
+    font-size  : 16px;
+}
+
+//выбранный пункт
+.select2-feedback .select2-container--theme-select2-feedback .select2-selection--single .select2-selection__rendered {
+    font-size  : 16px;
+    font-weight: 400;
+    color      : @color-gray;
+    opacity: 1;
+}
+
+//стрелочка в селекте
+.select2-feedback .select2-container--theme-select2-feedback .select2-selection--single .select2-selection__arrow {
+    position: static;
+}
+
+.select2-feedback .select2-container--theme-select2-feedback .select2-selection--single .select2-selection__arrow b {
+    position           : absolute;
+    border             : none;
+    width              : 14px;
+    height             : 14px;
+    margin             : auto;
+    content            : '';
+    pointer-events     : none;
+    background-image   : url(../images/icons/select-arrow.svg);
+    background-position: right center;
+    background-repeat  : no-repeat;
+    transition         : transform .5s ease-in-out;
+    top                : 0;
+    bottom             : 0;
+    right              : 15px;
+    font-weight        : 700;
+}
+
+.select2-feedback .select2-container--theme-select2-feedback.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    transform: rotateX(180deg);
+}
+
+//Блок с выбором
+.select2-container--theme-select2-feedback .select2-results__options {
+    padding   : 10px 0;
+    margin-top: 7px;
+    position  : relative;
+    background: #ffffff;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+
+    max-height: 425px;
+    overflow-y: auto;
+}
+
+//Элемент выбора в списке
+.select2-container--theme-select2-feedback .select2-results__option {
+    font-size     : 16px;
+    padding       : 12px 25px;
+    color         : @color-gray;
+    font-weight   : 400;
+    text-transform: uppercase;
+}
+
+//Элемент выбора в списке при наведении
+.select2-container--theme-select2-feedback .select2-results__option--highlighted:hover {
+    background: rgba(241, 240, 235, 0.3);
+}
+
+//Выбранный элемент в списке
+.select2-container--theme-select2-feedback .select2-results__option[aria-selected=true] {
+    color          : #4BA82E;
+    padding-left   : 50px;
+    background     : url(../images/icons/select-check-icon.svg) no-repeat 30px center;
+    background-size: 16px 16px;
+}
+
+//Служебные
+.select2-feedback .select2-container--theme-select2-feedback.select2-container--open {
+    border-radius: 0;
+}
+
+.select2-feedback .select2-dropdown {
+    border: none;
+}
+
+.select2-feedback .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+}
+
+.select2-container--theme-select2-feedback.select2-container--open .select2-dropdown--below {
+    border: 0;
+}
+
+.select2-container--theme-select2-feedback .select2-search--dropdown {
+    display: none;
+}
+
+.select2-feedback .select2.select2-container {
+    width: 100% !important;
+}
+
+
+// Ошибка заполнения
+.form__input--error+.select2-container--theme-select2-feedback .select2-selection--single {
+    border-color: red;
+}
+
+.form__input--error+.select2-container--theme-select2-feedback .select2-selection__placeholder {
+    color: red;
+}

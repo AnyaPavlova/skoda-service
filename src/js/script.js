@@ -80,6 +80,35 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: positionblock }, 1100);
     });
 
+    //PopUp
+    function PopUpShow(e) {
+        e.preventDefault();
+        if ($('.body').hasClass('body--on-popup')) { PopUpHide(); }; //если вызов popup из другого popup
+        var linkpopup = $(this).attr('href'); //значение ссылки
+        $(linkpopup).fadeIn(300);
+        $('.body').addClass('body--on-popup');
+
+        var container = $('.popup__container');
+        $('.popup').mouseup(function (element) {
+            if (!container.is(element.target) // если клик был не по нашему блоку
+                && (container.has(element.target).length === 0)) { // и не по его дочерним элементам
+                PopUpHide(); // скрываем его
+            };
+        });
+    };
+    function PopUpHide() {
+        $(".popup").fadeOut(300);
+        $('.body').removeClass('body--on-popup');
+    };
+    PopUpHide();
+    $(document).keydown(function (eventObject) {
+        if (eventObject.which == 27) {
+            PopUpHide();
+        }
+    });
+    $(".call-popup").on("click", PopUpShow);
+    $('.popup__close').on("click", PopUpHide);
+
 })
 
 $(document).ready(function () {
@@ -203,10 +232,15 @@ $(document).ready(function () {
         }
     }
 
-    var haveSelect = $(".select2-action");
+    var haveSelect = $(".select2");
     if (haveSelect.length != 0) {
+
         $('.select2-action select').select2({
             theme: 'theme-select2-action'
+        }).on('change',changeSelect).trigger('change');
+
+        $('.select2-feedback select').select2({
+            theme: 'theme-select2-feedback'
         }).on('change',changeSelect).trigger('change');
 
         //Если меняется select2, то вызываем функцияю изменения select
@@ -219,8 +253,9 @@ $(document).ready(function () {
                 changeSelectEvent = document.createEvent('Event');
                 changeSelectEvent.initEvent('input', true, true);
             }
-            this.closest('.select2-action').querySelector('select').dispatchEvent(changeSelectEvent); //вызываем событие
+            this.closest('.select2').querySelector('select').dispatchEvent(changeSelectEvent); //вызываем событие
         }
+
     };
     //Select2
     // var haveSelect = $(".select2-action");
@@ -228,8 +263,7 @@ $(document).ready(function () {
     //     $('.select2-action select').select2({
     //         theme: 'theme-select2-action'
     //     });
-    // };
-    
+    // };   
 
 })
 

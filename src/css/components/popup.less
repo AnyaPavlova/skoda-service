@@ -1,0 +1,117 @@
+.popup {
+    position  : fixed;
+    z-index   : 1000;
+    top       : 0;
+    right     : 0;
+    bottom    : 0;
+    left      : 0;
+    display   : none;
+    height    : 100vh;
+    margin    : auto;
+    padding   : 0;
+    background: rgba(0, 0, 0, 0.8);
+
+    &__container {
+        position         : absolute;
+        top              : 50%;
+        left             : 50%;
+        overflow-y       : auto;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform    : translate(-50%, -50%);
+        transform        : translate(-50%, -50%);
+
+        width     : calc(100% - 80px);
+        max-width : 1250px;
+        max-height: calc(100vh - 150px);
+
+        background: transparent;
+        padding   : 0;
+
+        &--form {
+            max-width: 600px;
+        }
+
+        @media screen and (max-width: 1250px) {
+            max-height: calc(100vh - 80px);
+        }
+
+        @media screen and (max-width: 960px) {
+            width     : calc(100% - 40px);
+            max-height: calc(100vh - 40px);
+        }
+
+        @media screen and (max-width: 670px) {
+            max-width : 90%;
+            max-height: 85%;
+        }
+
+    }
+
+    &__inner {
+        height   : 100%;
+        position : relative;
+        max-width: 100%;
+        margin   : 0 auto;
+
+        background: #ffffff;
+        padding   : 50px 55px;
+
+        @media screen and (max-width: 670px) {
+            padding: 35px 20px;
+        }
+    }
+
+    &__close {
+        display        : block;
+        width          : 26px;
+        height         : 26px;
+        position       : absolute;
+        top            : 20px;
+        right          : 20px;
+        background-size: contain;
+        cursor         : pointer;
+        z-index        : 5;
+        transition     : all 0.5s;
+
+        svg {
+            position: absolute;
+            left    : 0;
+            top     : 0;
+
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 670px) {
+            top  : 15px;
+            right: 15px;
+
+            width: 23px;
+            height: 23px;
+        }
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+
+}
+
+.popup__form {
+    display  : block;
+    margin   : auto;
+    max-width: 350px;
+}
+
+.popup__title {
+    font-size  : 27px;
+    line-height: 1.3;
+    font-weight: 700;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 670px) {
+        font-size: 23px;
+    }
+}
