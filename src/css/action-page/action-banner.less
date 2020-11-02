@@ -28,7 +28,8 @@
     &__inner {
         height: auto;
         margin: 0;
-        padding-top: 100px;
+        // padding-top: 100px;
+        padding-top: 200px;
         text-align: center;
 
         @media screen and (max-width: 1200px) {
@@ -36,10 +37,12 @@
         }
 
         @media screen and (max-width: 960px) {
-            padding-top: 0;
+            // padding-top: 0;
+            padding-top: 100px;
         }
         @media screen and (max-width: 670px) {
-            padding-top: 90px;
+            // padding-top: 90px;
+            padding-top: 120px;
         }
     }
     &__title {
@@ -47,6 +50,14 @@
 
         span {
             white-space: nowrap;
+        }
+    }
+
+    &__btns-block {
+        padding-top: 55px;
+
+        @media screen and (max-width: 670px) {
+            padding-top: 35px;
         }
     }
 
