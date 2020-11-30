@@ -1,6 +1,6 @@
 .contacts-line {
-    background: rgba(255, 255, 255, 0.8);
-    // background: paleturquoise;
+    // background: rgba(255, 255, 255, 0.8);
+    background: #E5E6E6;
     padding   : 25px 0;
 
     @media screen and (max-width: 1200px) {
@@ -14,10 +14,22 @@
 
     &__logo-link {
         display: block;
+        text-decoration: none;        
 
         @media screen and (max-width: 1200px) {
             max-width: 150px;
         }
+    }
+    &__logo-text {
+        font-size: 9px;
+        display: block;
+        line-height: 1;
+        padding-left: 9px;
+        letter-spacing: 0.025em;
+        margin-top: -3px;
+    }
+    &__logo {
+        width: 185px;
     }
 
     &__col--adress {

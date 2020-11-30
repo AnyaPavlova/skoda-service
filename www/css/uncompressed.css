@@ -1,8 +1,31 @@
 /*css*/
-
-@media screen and (max-width: 960px) { 
-  
+.action-info__table-price {
+    padding-bottom: 20px;
 }
-@media screen and (max-width: 670px) { 
-  
-} 
+
+.action-info__table-price th,
+.action-info__table-price td {
+    width: 25%;
+}
+
+.action-info__tab-name {
+    color: #4BA82E;
+}
+
+.action-info__old-price td {
+    font-size: 16px;
+    color    : #777777;
+}
+
+@media screen and (max-width: 960px) {
+    .action-info__table .action-info__tab-name {
+        line-height: 1.2;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .action-info__table-price {
+        overflow-x: auto;
+        display   : block;
+    }
+}
