@@ -1,49 +1,60 @@
 .btn {
-    display        : inline-block;
-    font-size      : 16px;
-    font-weight    : 700;
-    color          : #ffffff;
-    background     : @color-green;
-    transition     : all 0.5s;
-    padding        : 13px 25px;
-    text-decoration: none;
-    line-height    : 1.2;
+  display        : inline-block;
+  font-size      : 16px;
+  font-weight    : 700;
+  color          : #ffffff;
+  background     : @color-green;
+  transition     : all 0.5s;
+  padding        : 13px 25px;
+  text-decoration: none;
+  line-height    : 1.2;
+  border-radius  : 35px;
 
-    &:hover {
-        background: #377220;
-    }
+  &:hover {
+    background: #377220;
+  }
 }
 
 .btn-more {
-    text-decoration: none;
-    font-size: 18px;
-    color: #333333;
+  text-decoration: none;
+  font-size      : 18px;
+  // color          : #333333;
+  color: @color-green;
 
-    span {
-        line-height   : 1;
-        display       : inline-block;
-        vertical-align: bottom;
-        padding-right: 5px;
-    }
+  span {
+    line-height   : 1;
+    display       : inline-block;
+    vertical-align: middle;
+    padding-right : 5px;
+  }
 
-    svg {
-        display       : inline-block;
-        vertical-align: bottom;
-    }
+  svg {
+    display       : inline-block;
+    vertical-align: middle;
+  }
 }
 
 .btn-black {
-    display        : inline-block;
-    font-size      : 16px;
-    font-weight    : 700;
-    color          : #ffffff;
-    background     : #020202;
-    transition     : all 0.5s;
-    padding        : 13px 25px;
-    text-decoration: none;
-    line-height    : 1.2;
+  display        : inline-block;
+  font-size      : 16px;
+  font-weight    : 700;
+  color          : #ffffff;
+  background     : #020202;
+  transition     : all 0.5s;
+  padding        : 13px 25px;
+  text-decoration: none;
+  line-height    : 1.2;
 
-    &:hover {
-        background: @color-gray;
-    }
+  &:hover {
+    background: @color-gray;
+  }
+}
+
+.btn--white {
+  border    : 1px solid #ffffff;
+  background: transparent;
+
+  &:hover {
+    border-color: #377220;
+  }
 }

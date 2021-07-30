@@ -1,166 +1,125 @@
 .contacts-line {
-    // background: rgba(255, 255, 255, 0.8);
-    background: #E5E6E6;
-    padding   : 25px 0;
+  position     : absolute;
+  width        : 100%;
+  top          : 70px;
+  left         : 0;
+  // min-height: 445px;
+  background   : #ffffff;
+  box-shadow   : inset 0px 1px 0px #C4C4C4;
+  padding      : 36px 0 247px;
+  z-index      : 555;
+  display      : none;
 
+  @media screen and (max-width: 1200px) {
+    padding-bottom: 108px;
+  }
+
+  @media screen and (max-width: 960px) {
+    top: 60px;
+  }
+
+  @media screen and (max-width: 670px) {
+    height    : calc(100vh - 60px);
+    padding   : 0;
+    box-shadow: inset 0px 1px 0px #E5E5E5;
+  }
+
+  &__inner {
+    @media screen and (max-width: 670px) {
+      padding-top   : 24px;
+      padding-bottom: 48px;
+      overflow-y    : auto;
+    }
+  }
+
+  &__logo-link {
+    display        : block;
+    text-decoration: none;
+  }
+
+  &__logo-text {
+    font-size     : 9px;
+    display       : block;
+    line-height   : 1;
+    padding-left  : 9px;
+    letter-spacing: 0.025em;
+    margin-top    : -3px;
+  }
+
+  &__logo {
+    width: 185px;
+  }
+
+  &__col--adress {
     @media screen and (max-width: 1200px) {
-        padding: 10px 0;
+      display: none;
+    }
+  }
+
+  &__col--contacts {
+    @media screen and (max-width: 670px) {
+      display: none;
+    }
+  }
+
+  &__address-item {
+    @media screen and (max-width: 670px) {
+      padding-bottom: 36px;
+    }
+  }
+
+  &__address-name {
+    font-weight   : 700;
+    font-size     : 16px;
+    line-height   : 1.2;
+    padding-bottom: 4px;
+  }
+
+  &__address-time {
+    font-size     : 13px;
+    line-height   : 16px;
+    padding-bottom: 10px;
+    line-height   : 1.2;
+  }
+
+  &__address {
+    padding-bottom: 10px;
+  }
+
+  &__address-label {
+    font-size     : 13px;
+    line-height   : 1.2;
+    padding-bottom: 4px;
+    display       : block;
+  }
+
+  &__address-value {
+    font-size  : 16px;
+    line-height: 1.2;
+    display    : block;
+
+    @media screen and (max-width: 670px) {
+      font-size  : 14px;
+      font-weight: 700;
     }
 
-    &__row {
-        align-content: center;
-        align-items  : center;
+    br {
+      @media screen and (max-width: 670px) {
+        display: none;
+      }
     }
+  }
 
-    &__logo-link {
-        display: block;
-        text-decoration: none;        
+  &__phone {
+    font-size  : 20px;
+    line-height: 1.25;
+    color      : @color-green;
+    font-weight: 700;
+    display    : block;
 
-        @media screen and (max-width: 1200px) {
-            max-width: 150px;
-        }
+    a {
+      text-decoration: none;
     }
-    &__logo-text {
-        font-size: 9px;
-        display: block;
-        line-height: 1;
-        padding-left: 9px;
-        letter-spacing: 0.025em;
-        margin-top: -3px;
-    }
-    &__logo {
-        width: 185px;
-    }
+  }
 
-    &__col--adress {
-        @media screen and (max-width: 1200px) {
-            display: none;
-        }
-    }
-
-    &__col--contacts {
-        @media screen and (max-width: 670px) {
-            display: none;
-        }
-    }
-
-    &__address-list {
-        display        : flex;
-        flex-wrap      : wrap;
-        justify-content: space-around;
-        align-content  : center;
-        align-items    : center;
-    }
-
-    &__address {
-        font-size  : 16px;
-        font-weight: 700;
-        padding    : 0 10px;
-
-        span {
-            display: block;
-        }
-    }
-
-    &__contacts {
-        padding-left: 50px;
-        position    : relative;
-
-        @media screen and (max-width: 1280px) {
-            padding-left: 35px;
-        }
-
-        @media screen and (max-width: 1200px) {
-            padding-left   : 0;
-            display        : flex;
-            flex-wrap      : wrap;
-            justify-content: center;
-        }
-
-        &:before {
-            content        : '';
-            display        : block;
-            width          : 42px;
-            height         : 42px;
-            background     : url(../images/icons/time-icon.svg) no-repeat center;
-            background-size: contain;
-
-            position: absolute;
-            left    : 0;
-            top     : 0;
-            bottom  : 0;
-            margin  : auto;
-
-            @media screen and (max-width: 1280px) {
-                width: 30px;
-                height: 30px;
-            }
-
-            @media screen and (max-width: 1200px) {
-                display: none;
-            }
-        }
-    }
-
-    &__time {
-        font-size: 13px;
-        display  : block;
-
-        @media screen and (max-width: 1200px) {
-            padding-left : 34px;
-            padding-right: 20px;
-            font-size    : 16px;
-            position     : relative;
-
-            &:before {
-                content        : '';
-                display        : block;
-                width          : 24px;
-                height         : 24px;
-                background     : url(../images/icons/clock-icon.svg) no-repeat center;
-                background-size: contain;
-                position       : absolute;
-                left           : 0;
-                top            : 0;
-                bottom         : 0;
-                margin         : auto;
-            }
-        }
-
-        @media screen and (max-width: 670px) {
-            margin-bottom: 12px;
-            padding-right: 0;
-        }
-    }
-
-    &__phone {
-        font-weight    : 700;
-        font-size      : 16px;
-        display        : block;
-        text-decoration: none;
-
-        @media screen and (max-width: 1200px) {
-            padding-left: 34px;
-            font-size   : 16px;
-            position    : relative;
-
-            &:before {
-                content        : '';
-                display        : block;
-                width          : 24px;
-                height         : 24px;
-                background     : url(../images/icons/phone-icon.svg) no-repeat center;
-                background-size: contain;
-                position       : absolute;
-                left           : 0;
-                top            : 0;
-                bottom         : 0;
-                margin         : auto;
-            }
-        }
-
-        @media screen and (max-width: 670px) {
-            font-size: 18px;
-        }
-    }
 }

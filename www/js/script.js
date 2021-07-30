@@ -14,6 +14,20 @@ $(document).ready(function () {
 
     burger.addEventListener('click', toggleBurger);
     var menuBlock = document.querySelector('.menu-block');
+  } //Открытие блока с адресами
+
+
+  var btnAdresses = document.querySelector('#btn-addresses');
+
+  if (btnAdresses) {
+    var toggleShowAdresses = function toggleShowAdresses(event) {
+      event.preventDefault();
+      $(addressesBlock).slideToggle(300);
+      btnAdresses.classList.toggle('btn-addresses--open');
+    };
+
+    btnAdresses.addEventListener('click', toggleShowAdresses);
+    var addressesBlock = document.querySelector('.contacts-line');
   } //Промо-слайдер
 
 
@@ -21,18 +35,35 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    dots: true,
-    appendDots: $('.promo-slider__dots'),
+    dots: false,
+    // dots: true,
+    // appendDots: $('.promo-slider__dots'),
     rows: 0,
     prevArrow: '#promo-slider-prev',
     nextArrow: '#promo-slider-next',
     speed: 1000,
     fade: true,
     cssEase: 'linear',
+    autoplay: true,
+    pauseOnHover: true,
+    autoplaySpeed: 3000,
     responsive: [{
+      breakpoint: 960,
+      settings: {
+        arrows: false,
+        fade: false,
+        speed: 300,
+        cssEase: 'ease',
+        adaptiveHeight: true
+      }
+    }, {
       breakpoint: 670,
       settings: {
-        arrows: false
+        arrows: false,
+        fade: false,
+        speed: 300,
+        cssEase: 'ease',
+        adaptiveHeight: true
       }
     }]
   }); //Аккордион

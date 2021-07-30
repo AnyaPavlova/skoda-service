@@ -1,55 +1,69 @@
 <div id="signUp" class="popup">
-    <div class="popup__container popup__container--form">
-        <button type="button" class="popup__close">
-            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.808 25.02L.979 22.193 22.192.98l2.829 2.829L3.808 25.02z" fill="#4BA82E" />
-                <path d="M.979 3.808L3.807.979l21.214 21.213-2.829 2.829L.98 3.808z" fill="#4BA82E" /></svg>
-        </button>
-        <div class="popup__inner">
+  <div class="popup__container popup__container--form">
+    <button type="button" class="popup__close">
+      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.808 25.02L.979 22.193 22.192.98l2.829 2.829L3.808 25.02z" fill="#4BA82E" />
+        <path d="M.979 3.808L3.807.979l21.214 21.213-2.829 2.829L.98 3.808z" fill="#4BA82E" />
+      </svg>
+    </button>
+    <div class="popup__inner">
 
-            <h2 class="popup__title">Записаться на обслуживание</h2>
+      <h2 class="popup__title">Запись на сервис</h2>
+      <p class="popup__text">Вы можете оставить заявку и наши сотрудники сервиса свяжутся с вами в ближайшее время.</p>
 
-            <div class="popup__form">
+      <div class="popup__form">
 
-                <form class="feedback-form" action="jquery-mailer.php" method="post" novalidate>
-                    <input type="hidden" value="signUp" name="formType" />
-                    <input value="Форма Записаться на обслуживание" type="hidden" name="formSubject" />
+        <form class="feedback-form" action="jquery-mailer.php" method="post" novalidate>
+          <input type="hidden" value="signUp" name="formType" />
+          <input value="Форма Записаться на обслуживание" type="hidden" name="formSubject" />
 
-                    <div class="feedback-form__for-input">
-                        <input type="text" name="name" class="feedback-form__input" placeholder="Имя*" required data-form-error="Укажите имя">
-                    </div>
-                    <div class="feedback-form__for-input">
-                        <input type="tel" name="phone" class="feedback-form__input form-phone" placeholder="Телефон*" required data-form-error="Укажите телефон">
-                    </div>
-                    <div class="feedback-form__for-select select2 select2-feedback">
-                        <select name="dealer" data-placeholder="Выберите дилера*" data-form-error="Выберите один из пунктов списка" required>
-                            <option value="">Выберите дилера*</option>
-                            <option value="Центр Пулково">Центр Пулково</option>
-                            <option value="Центр Лахта">Центр Лахта</option>
-                            <option value="Центр Таллинский">Центр Таллинский</option>
-                        </select>
-                    </div>
-                    <div class="feedback-form__for-checkbox">
-                        <input class="feedback-form__checkbox" id="agree-signUp" type="checkbox" name="agree[]" value="Согласие на обработку запроса" required checked data-form-error="Подтвердите согласие на обработку">
-                        <label for="agree-signUp" class="feedback-form__label">
-                            <span class="feedback-form__check"></span>
-                            <span class="feedback-form__text"><a href="#">Согласие на обработку запроса</a></span>
-                        </label>
-                    </div>
-                    <div class="feedback-form__for-checkbox">
-                        <input class="feedback-form__checkbox" id="agree2-signUp" type="checkbox" name="agree[]" value="Согласие на дальнейшую коммуникацию" required checked data-form-error="Подтвердите согласие на коммуникацию">
-                        <label for="agree2-signUp" class="feedback-form__label">
-                            <span class="feedback-form__check"></span>
-                            <span class="feedback-form__text"><a href="#">Согласие на дальнейшую коммуникацию</a></span>
-                        </label>
-                    </div>
-                    <div class="feedback-form__btns-block feedback-form__btns-block--popup">
-                        <button type="submit" class="btn feedback-form__btn">Отправить заявку</button>
-                    </div>
-                </form>
-
+          <div class="popup__form-row row">
+            <div class="popup__form-col col col-6">
+              <div class="feedback-form__for-input">
+                <input type="text" name="name" class="feedback-form__input" placeholder="Имя*" required data-form-error="Укажите имя">
+              </div>
             </div>
+            <div class="popup__form-col col col-6">
+              <div class="feedback-form__for-input">
+                <input type="tel" name="phone" class="feedback-form__input form-phone" placeholder="Телефон*" required data-form-error="Укажите телефон">
+              </div>
+            </div>
+            <div class="popup__form-col col col-6">
+              <div class="feedback-form__for-select select2 select2-feedback">
+                <select name="dealer" data-placeholder="Выберите дилера*" data-form-error="Выберите один из пунктов списка" required>
+                  <option value="">Выберите дилера*</option>
+                  <option value="Центр Пулково">Центр Пулково</option>
+                  <option value="Центр Лахта">Центр Лахта</option>
+                  <option value="Центр Таллинский">Центр Таллинский</option>
+                </select>
+              </div>
+            </div>
+          </div>
 
-        </div>
+          <div class="popup__form-checkboxes">
+            <div class="feedback-form__for-checkbox">
+              <input class="feedback-form__checkbox" id="agree-signUp" type="checkbox" name="agree[]" value="Согласие на обработку запроса" required checked data-form-error="Подтвердите согласие на обработку">
+              <label for="agree-signUp" class="feedback-form__label">
+                <span class="feedback-form__check"></span>
+                <span class="feedback-form__text"><a href="#">Согласие на обработку запроса</a></span>
+              </label>
+            </div>
+            <div class="feedback-form__for-checkbox">
+              <input class="feedback-form__checkbox" id="agree2-signUp" type="checkbox" name="agree[]" value="Согласие на дальнейшую коммуникацию" required checked data-form-error="Подтвердите согласие на коммуникацию">
+              <label for="agree2-signUp" class="feedback-form__label">
+                <span class="feedback-form__check"></span>
+                <span class="feedback-form__text"><a href="#">Согласие на дальнейшую коммуникацию</a></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="feedback-form__btns-block feedback-form__btns-block--popup">
+            <button type="submit" class="btn feedback-form__btn">Отправить заявку</button>
+          </div>
+        </form>
+
+      </div>
+
     </div>
+  </div>
 </div>
