@@ -27,12 +27,35 @@
     background: transparent;
     padding   : 0;
 
+    @media screen and (min-width: 961px) {
+      &::-webkit-scrollbar {
+        // width: 0;
+        width: 4px;
+      }
+ 
+      &::-webkit-scrollbar-track {
+        // border-radius   : 20px;
+        background-color: rgba(75, 168, 46, 0.5);
+      }
+ 
+      &::-webkit-scrollbar-thumb {
+        // border-radius   : 20px;
+        background-color: rgba(75, 168, 46, 1);
+        opacity: 0.5;
+      }
+    }
+
     &--form {
       max-width: 708px;
 
       @media screen and (max-width: 960px) {
         max-width: 615px;
       }
+    }
+
+    &--service {
+      max-width: 1082px;
+      max-height: calc(100vh - 80px);
     }
 
     @media screen and (max-width: 1250px) {
@@ -62,6 +85,15 @@
     padding      : 100px 42px 64px;
 
     border-radius: 12px;
+
+    &--service {
+      padding: 64px 96px 64px;
+      border-radius: 0;
+
+      @media screen and (max-width: 960px) {
+        padding: 75px 44px 30px;
+      }
+    }
 
     @media screen and (max-width: 670px) {
       // padding: 35px 20px;
