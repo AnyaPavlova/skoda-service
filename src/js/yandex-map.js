@@ -24,9 +24,9 @@ if (contactsPage) {
     var listObjectsMapContacts = {
         "type": "FeatureCollection",
         "features": [
-            { "type": "Feature", "id": 0, "geometry": { "type": "Point", "coordinates": [59.810460, 30.317979] }, "properties": { iconCaption: 'Пулково-Авто' } },
-            { "type": "Feature", "id": 1, "geometry": { "type": "Point", "coordinates": [59.997145, 30.248962] }, "properties": { iconCaption: 'Неон-Авто' } },
-            { "type": "Feature", "id": 2, "geometry": { "type": "Point", "coordinates": [59.808242, 30.165203] }, "properties": { iconCaption: 'Таллинский-Авто' } }
+            { "type": "Feature", "id": 0, "geometry": { "type": "Point", "coordinates": [59.810460, 30.317979] }, "properties": { iconCaption: 'ВАГНЕР Пулково' } },
+            { "type": "Feature", "id": 1, "geometry": { "type": "Point", "coordinates": [59.997145, 30.248962] }, "properties": { iconCaption: 'ВАГНЕР Лахта' } },
+            { "type": "Feature", "id": 2, "geometry": { "type": "Point", "coordinates": [59.808242, 30.165203] }, "properties": { iconCaption: 'ВАГНЕР Таллинский' } }
         ]
     };
 

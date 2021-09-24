@@ -30,7 +30,7 @@ if (contactsPage) {
         "coordinates": [59.810460, 30.317979]
       },
       "properties": {
-        iconCaption: 'Пулково-Авто'
+        iconCaption: 'ВАГНЕР Пулково'
       }
     }, {
       "type": "Feature",
@@ -40,7 +40,7 @@ if (contactsPage) {
         "coordinates": [59.997145, 30.248962]
       },
       "properties": {
-        iconCaption: 'Неон-Авто'
+        iconCaption: 'ВАГНЕР Лахта'
       }
     }, {
       "type": "Feature",
@@ -50,7 +50,7 @@ if (contactsPage) {
         "coordinates": [59.808242, 30.165203]
       },
       "properties": {
-        iconCaption: 'Таллинский-Авто'
+        iconCaption: 'ВАГНЕР Таллинский'
       }
     }]
   };
